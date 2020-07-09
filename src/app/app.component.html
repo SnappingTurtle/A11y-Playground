@@ -4,21 +4,60 @@
 <label id="radio-group-label">Group of radio buttons</label>
 <label aria-hidden="true" hidden="true" id="radio-button-1-label">Hotdog with cheese</label>
 <mat-radio-group
+  #rg
   aria-labelledby="radio-group-label"
   class="radio-group-basic1">
   <mat-radio-button 
+    #rb1
     class="radio-button-basic1"
     aria-labelledby="radio-button-1-label"
-    [value]="options.OPTION_ONE">
+    [value]="options.OPTION_ONE"
+    (click)="selectDuration(rb1.value)">
     {{options.OPTION_ONE}}
   </mat-radio-button>
   <mat-radio-button 
+    #rb2
     class="radio-button-basic1"
     value="'button 2'"
-    [value]="options.OPTION_TWO">
+    [value]="options.OPTION_TWO"
+    (click)="selectDuration(rb2.value)">
     {{options.OPTION_TWO}}
   </mat-radio-button>
 
 </mat-radio-group>
+
+<p>Example of some paragraph text that should be skipped in tab order</p>
+
+<button mat-icon-button aria-label="Example icon button without text for edit">
+  <mat-icon>edit</mat-icon>
+</button>
+
+<p>Another example of some paragraph text that should be skipped in tab order</p>
+
+<button mat-flat-button aria-label="Example basic flat button with text and icon for delete or trash">
+  <mat-icon>delete</mat-icon>
+  Delete
+</button>
+
+<p>Example of a Material Card that could be used as an inline modal</p>
+<mat-card>
+  <mat-card-header>
+
+  </mat-card-header>
+  <mat-card-content>
+    <p>this is a paragraph in the content area</p>
+    <p>this is a second paragraph in the content area</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button aria-label="Add a person to list of persons">
+      <mat-icon>person_add</mat-icon>
+      Add Person
+    </button>
+    <button mat-flat-button aria-label="Cancel adding person">
+      <mat-icon>cancel</mat-icon>
+      Cancel
+    </button>
+  </mat-card-actions>
+</mat-card>
 
 <router-outlet></router-outlet>
