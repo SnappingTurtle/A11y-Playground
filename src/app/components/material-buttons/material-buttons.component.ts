@@ -12,4 +12,8 @@ export class MaterialButtonsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDelete() {
+    alert('delete pressed - check for aria alert');
+  }
+
 }
