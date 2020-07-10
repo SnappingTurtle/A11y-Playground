@@ -9,10 +9,23 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule  } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MenubarComponent } from './components/menubar/menubar.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FooterComponent } from './components/footer/footer.component';
+import { MaterialRadioControlComponent } from './components/material-radio-control/material-radio-control.component';
+import { MaterialCardControlComponent } from './components/material-card-control/material-card-control.component';
+import { MaterialButtonsComponent } from './components/material-buttons/material-buttons.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenubarComponent,
+    FooterComponent,
+    MaterialRadioControlComponent,
+    MaterialCardControlComponent,
+    MaterialButtonsComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +34,10 @@ import { MatCardModule  } from '@angular/material/card';
     MatRadioModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

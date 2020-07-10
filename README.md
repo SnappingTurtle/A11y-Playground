@@ -14,6 +14,14 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+For GitHub pages build, target the docs directory
+Run 'ng build --prod --output-path docs --base-href /<project_name>/'
+So 'ng build --prod --output-path docs --base-href /A11y-Playground/'
+
+When the build is complete, make a copy of docs/index.html and name it docs/404.html
+
+Then when choosing source on GitHub choose docs and publish from the docs folder https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).

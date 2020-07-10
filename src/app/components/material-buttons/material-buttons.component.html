@@ -1,0 +1,21 @@
+<div class="component-wrapper">
+    <h2>Material 10 flat and icon buttons</h2>
+    <p>A paragraph that should be skipped in tab order</p>
+
+    <p>A mat-icon-button that can be used as a button without text</p>
+
+    <button mat-icon-button aria-label="Example icon button without text for edit">
+        <mat-icon>edit</mat-icon>
+    </button>
+
+    <p>Another paragraph that should be skipped in tab order</p>
+
+
+    <p>A mat-flat-button which may have icon plus button text</p>
+    <button mat-flat-button 
+        aria-label="Example basic flat button with text and icon for delete or trash"
+        (click)="onDelete()">
+        <mat-icon>delete</mat-icon>
+        Delete
+    </button>
+</div>

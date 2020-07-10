@@ -1,0 +1,34 @@
+<div class="component-wrapper">
+    <h2>Material 10 radio buttons</h2>
+    <p>Example of some paragraph text that should be skipped in tab order</p>
+    <label id="radio-group-label">Group of radio buttons</label>
+    <label aria-hidden="true" hidden="true" id="radio-button-1-label">Hotdog with cheese</label>
+    <mat-radio-group
+        #rg
+        aria-labelledby="radio-group-label"
+        class="radio-group-basic1">
+        <mat-radio-button 
+            #rb1
+            class="radio-button-basic1"
+            aria-labelledby="radio-button-1-label"
+            [value]="options.OPTION_ONE"
+            (click)="selectOption(rb1.value)">
+            {{options.OPTION_ONE}}
+        </mat-radio-button>
+        <mat-radio-button 
+            #rb2
+            class="radio-button-basic1"
+            value="'button 2'"
+            [value]="options.OPTION_TWO"
+            (click)="selectOption(rb2.value)">
+            {{options.OPTION_TWO}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>
+
+
+
+
+      
+
+

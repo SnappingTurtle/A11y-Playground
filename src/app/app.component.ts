@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { MatRadioGroup, MatRadioButton } from '@angular/material/radio';
-import { MatButton } from '@angular/material/button';
+import { Router  } from '@angular/router'
 // import { MatIcon } from '@angular/material/icon';
 // import { MatCard } from '@angular/material/card';
 
@@ -14,13 +13,19 @@ export class AppComponent {
   title = 'a11yPlayground';
   options = TestOptions;
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
+    
 
   }
 
-  selectDuration(e: any) {
-    alert('zubida');
+  onDelete() {
+    
+    this.router.navigate(['/radio']);
   }
+
+  
 }
 
 export enum TestOptions {
