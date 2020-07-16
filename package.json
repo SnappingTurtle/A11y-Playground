@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pages": "ng build --prod --output-path docs --base-href /A11y-Playground/"
+    "pages": "ng build --prod --output-path docs --base-href /A11y-Playground/",
+    "dev": "ng serve --port 4500"
   },
   "private": true,
   "dependencies": {

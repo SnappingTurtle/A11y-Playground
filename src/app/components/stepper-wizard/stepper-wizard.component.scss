@@ -1,16 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.component-wrapper {
-    margin-left: 50px;
-    margin-top: 30px;
-}
-
 #wizard-wrapper {
+    width: 1000px;
+
     .mat-horizontal-stepper-header-container {
-        height: 180px;
+        height: 140px;
         background-color: rgba(255,255,255,1);
     }
 
@@ -28,13 +20,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         box-sizing: content-box;
         -webkit-tap-highlight-color: transparent;
         height: 100%;
-        width: 400px;
-        background-color: rgba(90, 147, 238, 0.336);
-        /* background-image: url('./assets/img/poly.svg'); */
-    }
-
-    .mat-step-header:focus {
-        background-color: rgba(128, 245, 81, 0.246);
     }
 
     .mat-horizontal-stepper-header {
@@ -42,7 +27,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         padding: 0 24px;
         flex-direction: column;
         height: 100%;
-        padding-bottom: 20px;
     }
 
     .mat-stepper-horizontal-line {
@@ -57,19 +41,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .step-text {
         text-align: center;
     }
-
-    .mat-step-icon {
-        border-radius: 50%;
-        height: 24px;
-        width: 24px;
-        flex-shrink: 0;
-        position: relative;
-        top: 140px;
-        left: 10px;
-    }
 }
+.mat-stepper-horizontal {
+    margin-top: 8px;
+    width: 1000px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }
 
-.spacer {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+  .step-label-test {
+      background-color: rgba(255,255,255, 0.3);
+  }
+
+  .flex-form-container-col {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .flex-form-item {
+      display: flex;
+  }
+
+  .step-down {
+      margin-top: 20px;
+  }
+
+  

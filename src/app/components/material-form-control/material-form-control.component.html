@@ -1,0 +1,26 @@
+<div class="component-wrapper">
+    <p>Simple example of a mat-form-field</p>
+    <!-- <p>Extra label has a for= linkage to input field</p> -->
+    <div class="example-container">
+        <!-- <label for="email-input">Extra label in explicit label field</label> -->
+
+        <p>A button to test tabbing to and from form field</p>
+        <div class="spacer"></div>
+        <button mat-icon-button aria-label="Example icon button without text for edit">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input id="email-input" matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+        <div class="spacer"></div>
+        
+        <button mat-icon-button aria-label="Example icon button without text for edit">
+            <mat-icon>edit</mat-icon>
+        </button>
+
+    </div>
+</div>
+

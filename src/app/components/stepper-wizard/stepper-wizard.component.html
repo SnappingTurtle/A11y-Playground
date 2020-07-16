@@ -1,0 +1,66 @@
+<div class="component-wrapper">
+<div id="wizard-wrapper">
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>
+                <div class="step-label-test">
+                    <app-stepper-template [stepText]="'Who'" [stepIcon]="'assets/img/who.svg'"></app-stepper-template>
+                </div>
+            </ng-template>
+            <div class="flex-form-container-col">
+                <div class="flex-form-item">
+                    <mat-form-field>
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="First name" formControlName="firstNameCtrl" required>
+                    </mat-form-field>
+                </div>
+                <div class="flex-form-item">
+                    <mat-form-field>
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Last name" formControlName="lastNameCtrl" required>
+                    </mat-form-field>
+                </div>
+                
+                
+            </div>
+            
+            <div>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>
+                <div class="step-label-test">
+                    <app-stepper-template [stepText]="'Where'" [stepIcon]="'assets/img/where.svg'"></app-stepper-template>
+                </div>
+                Fill out your address
+            </ng-template>
+            <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                    required>
+            </mat-form-field>
+            <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+        </mat-step>
+        <mat-step>
+        <ng-template matStepLabel class="space-down">
+            <div class="step-label-test">
+                <app-stepper-template [stepText]="'Done'" [stepIcon]="'assets/img/done.svg'"></app-stepper-template>
+            </div>
+        </ng-template>
+        <p class="step-down">You've completed the necessary forms to complete the mail forward request.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>
+</div>

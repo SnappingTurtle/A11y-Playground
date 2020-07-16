@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Router  } from '@angular/router'
-// import { MatIcon } from '@angular/material/icon';
-// import { MatCard } from '@angular/material/card';
-
+import { StepperTemplateComponent } from './components/stepper-wizard/stepper-template/stepper-template.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +10,7 @@ import { Router  } from '@angular/router'
 export class AppComponent {
   title = 'a11yPlayground';
   options = TestOptions;
+  mycolour = '#00ff0080';
 
   constructor(
     private router: Router
