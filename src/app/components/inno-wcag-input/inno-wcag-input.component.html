@@ -1,0 +1,9 @@
+<div class="button-wrapper">
+    <label for="{{idFromParent}}{{listIndex || '-only'}}" class="label-class">Input Label {{listIndex}}</label>
+    <button id="Button{{listIndex}}" mat-flat-button color="primary">
+        {{'button ' + listIndex}}
+    </button>
+    <mat-form-field appearance="fill">
+        <input id="{{idFromParent}}{{listIndex}}"  class="email-input" matInput placeholder="danny@gmail.com"  required>
+    </mat-form-field>
+</div>

@@ -1,0 +1,9 @@
+<div class="component-wrapper">
+    <ul>
+        <li *ngFor="let item of items; let i = index" [attr.data-index]="i">
+            <inno-inno-wcag-input [idFromParent]="'danno'" [listIndex]="i">
+            </inno-inno-wcag-input>
+        </li>
+    </ul>
+</div>
+<app-code-viewer [snippet]="otherSnippet"></app-code-viewer>

@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule  } from '@angular/material/card';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MenubarComponent } from './components/menubar/menubar.component';
@@ -24,6 +26,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StepperTemplateComponent } from './components/stepper-wizard/stepper-template/stepper-template.component';
 import { MaterialFormControlComponent } from './components/material-form-control/material-form-control.component';
 import { UniqueListComponent } from './components/unique-list/unique-list.component';
+import { InnoWcagInputComponent } from './components/inno-wcag-input/inno-wcag-input.component';
+import { Other1Component } from './components/other1/other1.component';
+import { HighlightService } from './services/highlight-service.service';
+import { CodeViewerComponent } from './components/code-viewer/code-viewer.component';
+import { TsHtmlScssTabbedViewerComponent } from './components/ts-html-scss-tabbed-viewer/ts-html-scss-tabbed-viewer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +43,11 @@ import { UniqueListComponent } from './components/unique-list/unique-list.compon
     StepperWizardComponent,
     StepperTemplateComponent,
     MaterialFormControlComponent,
-    UniqueListComponent
+    UniqueListComponent,
+    InnoWcagInputComponent,
+    Other1Component,
+    CodeViewerComponent,
+    TsHtmlScssTabbedViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +62,13 @@ import { UniqueListComponent } from './components/unique-list/unique-list.compon
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
-    MatStepperModule
+    MatStepperModule,
+    MatTabsModule,
+    MatMenuModule
   ],
-  providers: [],
+  providers: [
+    HighlightService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

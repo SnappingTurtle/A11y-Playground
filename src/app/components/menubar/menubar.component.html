@@ -1,9 +1,22 @@
 <p>
     <mat-toolbar>
-        <button mat-icon-button class="hamberder-button" aria-label="Hamberder icon for menu">
+        <button mat-button 
+            class="hamberder-button"
+            [matMenuTriggerFor]="a11yMenu" aria-label="Hamberder icon for menu">
             <mat-icon>menu</mat-icon>
+            A11y Menu
         </button>
-        <span>A11y Menu</span>
+        <mat-menu #a11yMenu="matMenu">
+            <button mat-menu-item routerLink="/radio">Radio Button</button>
+            <button mat-menu-item routerLink="/card">Mat Card</button>
+            <button mat-menu-item routerLink="/wizard">Mat Stepper Wizard</button>
+            <button mat-menu-item routerLink="/forms">Mat Form</button>
+            <button mat-menu-item routerLink="/buttons">Mat Button</button>
+            <button mat-menu-item routerLink="/lists">Lists - unique ID</button>
+            <button mat-menu-item routerLink="/regions">Live Regions</button>
+            <button mat-menu-item routerLink="/other1">Other Stuff</button>
+        </mat-menu>
+        
         <span class="flex-spacer"></span>
         <mat-form-field>
             <mat-label>Search</mat-label>

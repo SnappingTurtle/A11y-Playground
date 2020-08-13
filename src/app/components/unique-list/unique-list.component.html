@@ -2,12 +2,12 @@
     <ul>
         <li *ngFor="let item of items; let i = index" [attr.data-index]="i">
             <div class="button-wrapper">
-                <label for="Input{{i}}" class="label-class">Input Label {{i}}</label>
+                <label for="{{idFromParent}}{{i || '-only'}}" class="label-class">Input Label {{i}}</label>
                 <button id="Button{{i}}" mat-flat-button color="primary">
                     {{'button ' + i}}
                 </button>
                 <mat-form-field appearance="fill">
-                    <input id="Input{{i}}"  class="email-input" matInput placeholder="danny@gmail.com"  required>
+                    <input id="{{idFromParent}}{{i}}"  class="email-input" matInput placeholder="danny@gmail.com"  required>
                 </mat-form-field>
             </div>
             

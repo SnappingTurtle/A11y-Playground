@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* for prism code highlighter */
+@import "~prismjs/plugins/toolbar/prism-toolbar.css";
+@import "~prismjs/plugins/unescaped-markup/prism-unescaped-markup.css";
+/* @import "~prismjs/themes/prism-okaidia"; */
+@import "~prismjs/themes/prism-tomorrow";
+/* @import "~prismjs/themes/prism-coy"; */
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -72,4 +79,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .spacer {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.mat-button-focus-overlay {
+    border-radius: 0px !important;
+    background-color: red;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    line-height: 1.5em;
 }

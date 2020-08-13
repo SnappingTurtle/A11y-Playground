@@ -1,0 +1,19 @@
+.button-wrapper {
+    width: 400px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+li {
+    list-style-type: none;
+}
+
+.label-class {
+    display: flex;
+    align-items: center;
+}
+
+.email-input {
+    width: 200px;
+}
