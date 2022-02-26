@@ -7,9 +7,14 @@
 @import "~prismjs/themes/prism-tomorrow";
 /* @import "~prismjs/themes/prism-coy"; */
 
+@import "~highlight.js/styles/github.css";
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+app-root {
+    height: 100%;
+}
 .component-wrapper {
     margin-left: 50px;
     margin-top: 30px;
@@ -89,4 +94,48 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 code[class*="language-"],
 pre[class*="language-"] {
     line-height: 1.5em;
+    background-color: green;
 }
+
+.tab-div {
+    position: relative;
+    background-color: blue;
+    width: 100%;
+    height: 500px;
+}
+
+eval-ts-html-scss-tabbed-viewer {
+    height: 100%;
+    margin-right: 20px;
+    .tabbed-code-viewer {
+        height: 100%;
+        
+        /* overflow-y: hidden; */
+        .mat-tab-group {
+            height: 100%
+        }
+        .mat-tab-body-wrapper {
+            /* overflow-x: auto; */
+        }
+        .mat-tab-body {
+            height: 100%;
+            overflow: auto;
+        }
+        .mat-tab-body-content {
+            overflow: unset;
+        }
+        .code-wrapper {
+            height: 100%;
+            width: 100%;
+            /* overflow: auto; */
+        }
+        .hljs {
+            overflow: unset;
+        }
+    }
+}
+/* app-other1 {
+    height: 100%;
+}
+ */
+

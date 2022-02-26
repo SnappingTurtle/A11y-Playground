@@ -2,15 +2,22 @@
     <mat-tab-group>
         <mat-tab label="Markup">
             Markup content
+            <pre><code [highlight]="otherSnippet" [lineNumbers]="hasLineNumbers"></code></pre>
         </mat-tab>
         <mat-tab label="TypeScript">
-            <app-code-viewer [snippet]="otherSnippet"></app-code-viewer> 
+            <div class="code-wrapper">
+                <pre><code [highlight]="testURL | codeFromUrl | async" [lineNumbers]="true"></code></pre>
+            </div>
+            
         </mat-tab>
         <mat-tab label="Layout">
             Content 2
+            <img src="assets/img/who.svg">
         </mat-tab>
         <mat-tab label="SCSS">
-            Content 3
+            <pre><code [highlight]="baseURL+markup | codeFromUrl | async" [lineNumbers]="true"></code></pre>
         </mat-tab>
     </mat-tab-group>
 </div>
+<!-- <app-code-viewer [snippet]="otherSnippet"></app-code-viewer> -->
+<!-- <pre data-src="assets/codeview/unique-list-snippet.html.codeview" class="language-markup"></pre> -->

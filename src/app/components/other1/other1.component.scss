@@ -1,3 +1,7 @@
+app-other1 {
+    height: 100%;
+}
+
 .button-wrapper {
     width: 400px;
     margin: 20px;
@@ -21,6 +25,7 @@ li {
 .flex-row {
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 .flex-col-5 {
@@ -33,4 +38,6 @@ li {
     display: flex;
     flex-direction: column;
     flex: 15;
+    height: 100%;
+    overflow: auto;
 }

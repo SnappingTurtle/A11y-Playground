@@ -31,6 +31,8 @@ import { Other1Component } from './components/other1/other1.component';
 import { HighlightService } from './services/highlight-service.service';
 import { CodeViewerComponent } from './components/code-viewer/code-viewer.component';
 import { TsHtmlScssTabbedViewerComponent } from './components/ts-html-scss-tabbed-viewer/ts-html-scss-tabbed-viewer.component';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { HighlightPlusModule } from 'ngx-highlightjs/plus';
 
 @NgModule({
   declarations: [
@@ -64,10 +66,18 @@ import { TsHtmlScssTabbedViewerComponent } from './components/ts-html-scss-tabbe
     ReactiveFormsModule,
     MatStepperModule,
     MatTabsModule,
-    MatMenuModule
+    MatMenuModule,
+    HighlightModule,
+    HighlightPlusModule
   ],
   providers: [
     HighlightService,
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      }
+    }
   ],
   bootstrap: [AppComponent]
 })
